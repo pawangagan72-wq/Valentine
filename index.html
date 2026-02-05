@@ -129,13 +129,22 @@ setInterval(() => {
   setTimeout(()=>heart.remove(),6000);  
 },300);  
 </script>  
+<button onclick="playMusic()" style="padding:10px 20px;font-size:16px;">
+🎵 Play Our Song
+</button>
 
-  <!-- Background song -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/hoj20o964wg?autoplay=1&loop=1&playlist=hoj20o964wg"
+<iframe id="ytplayer" width="0" height="0"
+src="https://www.youtube.com/embed/hoj20o964wg?enablejsapi=1"
 frameborder="0"
-allow="autoplay; encrypted-media">
+allow="autoplay">
 </iframe>
-  <p>🎵 Hold your screen or tap once to hear our song 💗</p>
+
+<script>
+function playMusic() {
+  document.getElementById("ytplayer").src =
+  "https://www.youtube.com/embed/hoj20o964wg?autoplay=1&loop=1&playlist=hoj20o964wg";
+}
+</script>
+  
 </body>  
 </html>  
