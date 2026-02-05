@@ -55,12 +55,10 @@ line-height:1.6;
 
 <body>
 
-<!-- Hidden YouTube Player -->
-<iframe id="player"
-src="https://www.youtube.com/embed/hoj20o964wg?playsinline=1&loop=1&playlist=hoj20o964wg"
-style="display:none"
-allow="autoplay">
-</iframe>
+<!-- Background Music -->
+<audio id="bgm" autoplay loop>
+ <source src="love.mp3" type="audio/mpeg">
+</audio>
 
 <div class="container">
 <h1>Hey Manmeet 💖🥺</h1>
@@ -71,12 +69,11 @@ allow="autoplay">
 </div>
 
 <script>
-const iframe=document.getElementById("player");
 
-// Start music on first tap (iPhone safe)
+// iPhone needs tap
 document.addEventListener("click",()=>{
-iframe.src="https://www.youtube.com/embed/hoj20o964wg?autoplay=1&playsinline=1&loop=1&playlist=hoj20o964wg";
-},{once:true});
+document.getElementById("bgm").play();
+});
 
 function moveNo(){
 const no=document.getElementById("no");
@@ -116,6 +113,7 @@ h.style.left=Math.random()*100+"vw";
 document.body.appendChild(h);
 setTimeout(()=>h.remove(),6000);
 },300);
+
 </script>
 
 </body>
