@@ -103,7 +103,7 @@ function yesClicked() {
       <p>My Love 🥺💕</p>  
   
       <p>  
-      Since the day I started talking to you I was so infatuated by you… slowly I realised how much I have started liking you…<br><br>  
+      Since the day I started talking to you… slowly I realised how much I have started liking you…<br><br>  
       The day I met you, I started falling in love with you. 💗<br><br>  
       You are sooo beautiful my love 🥰<br>  
       Your smile lights up my day ☀️<br><br>  
@@ -131,21 +131,17 @@ setInterval(() => {
   setTimeout(()=>heart.remove(),6000);  
 },300);  
 </script>  
-<button onclick="playMusic()" style="padding:10px 20px;font-size:16px;">
-🎵 Play Our Song
-</button>
-
-<iframe id="ytplayer" width="0" height="0"
-src="https://www.youtube.com/embed/hoj20o964wg?enablejsapi=1"
-frameborder="0"
-allow="autoplay">
-</iframe>
+<audio id="bgMusic" autoplay loop muted>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-function playMusic() {
-  document.getElementById("ytplayer").src =
-  "https://www.youtube.com/embed/hoj20o964wg?autoplay=1&loop=1&playlist=hoj20o964wg";
-}
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", () => {
+  music.muted = false;
+  music.play();
+});
 </script>
   
 </body>  
